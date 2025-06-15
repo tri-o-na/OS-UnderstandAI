@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", RUN+="/home/fu_pi/csc1107_assignment_qn1/usb_inserted.sh"
