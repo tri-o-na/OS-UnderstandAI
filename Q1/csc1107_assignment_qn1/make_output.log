@@ -1,0 +1,19 @@
+/usr/bin/make -C /lib/modules/6.12.25+rpt-rpi-v8/build M=/home/fu_pi/csc1107_assignment_qn1 modules
+make[1]: Entering directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+  CC [M]  /home/fu_pi/csc1107_assignment_qn1/hello_module.o
+  MODPOST /home/fu_pi/csc1107_assignment_qn1/Module.symvers
+  CC [M]  /home/fu_pi/csc1107_assignment_qn1/hello_module.mod.o
+  LD [M]  /home/fu_pi/csc1107_assignment_qn1/hello_module.ko
+make[1]: Leaving directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+/usr/bin/make -C /lib/modules/6.12.25+rpt-rpi-v8/build M=/home/fu_pi/csc1107_assignment_qn1 modules
+/usr/bin/make -C /lib/modules/6.12.25+rpt-rpi-v8/build M=/home/fu_pi/csc1107_assignment_qn1 modules
+make[1]: Entering directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+make[1]: Entering directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+make[1]: Leaving directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+make[1]: Leaving directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+/usr/bin/make -C /lib/modules/6.12.25+rpt-rpi-v8/build M=/home/fu_pi/csc1107_assignment_qn1 modules
+make[1]: Entering directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+make[1]: Leaving directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+/usr/bin/make -C /lib/modules/6.12.25+rpt-rpi-v8/build M=/home/fu_pi/csc1107_assignment_qn1 modules
+make[1]: Entering directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
+make[1]: Leaving directory '/usr/src/linux-headers-6.12.25+rpt-rpi-v8'
