@@ -17,24 +17,33 @@ def pageFaults(ref, frameNum, frameList):
             counter += 1 # increase page faults count
             if len(frameList) > frameNum:
                 frameList.pop(0) # if frameList exceeds frameNum, pop from the top
-    print(counter)
+        frameStr = ', '.join(str(x) for x in frameList)
+        print(f"{i}\t{frameStr}")
+    print("Total Number of Page Faults: " + str(counter))
 
 def main():
     while True:
-        frameNum = int(input("Key in the number of available frames in memory at a time from 3 to 6: "))
-        if frameNum < 3 or frameNum > 6:
-            print("Please enter a number between 3 and 6 for the number of frames.")
-        else:
-            break
+        try: 
+            frameNum = int(input("Key in the number of available frames in memory at a time from 3 to 6: "))
+            if frameNum < 3 or frameNum > 6:
+                print("Please enter a number between 3 and 6 for the number of frames.")
+            else:
+                break
+        except ValueError:
+            print("Invalid. Please enter an integer.")
     
     while True:
-        ref_input = input("Key in the reference string of referenced page numbers from 15 to 25 (comma separated): ")
-        ref = [int(x.strip()) for x in ref_input.split(',')]
-        if len(ref) < 15 or len(ref) > 25:
-            print("Please enter a reference string with length between 15 and 25.")
-        else:
-            break
-    
+        try:
+            ref_input = input("Key in the reference string of referenced page numbers from 15 to 25 (comma separated): ")
+            ref = [int(x.strip()) for x in ref_input.split(',')]
+            if len(ref) < 15 or len(ref) > 25:
+                print("Please enter a reference string with length between 15 and 25.")
+            else:
+                break
+        except ValueError:
+            print("Invalid. Please enter an integer.")
+    print("\nPage\tFrame\t")
+    print("-" * 20)
     pageFaults(ref, frameNum, frameList)
 
 if __name__ == "__main__":

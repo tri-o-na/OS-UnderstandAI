@@ -1,14 +1,21 @@
 def fifo_page_replacement(frames, reference_string):
     memory = []
     page_faults = 0
+    
     for page in reference_string:
+        fault = False
         if page not in memory:
             page_faults += 1
+            fault = True
             if len(memory) < frames:
                 memory.append(page)
             else:
                 memory.pop(0)  # Remove the oldest page
                 memory.append(page)
+        
+        # Print current state
+        print("Page: " + str(page) + ": Sequence " + str(memory))
+    
     return page_faults
 
 def main():
@@ -36,7 +43,8 @@ def main():
             print("Invalid input. Please enter integers separated by commas.")
 
     page_faults = fifo_page_replacement(frames, reference_string)
-    print(f"Total number of page faults: {page_faults}")
+    print(f"\nTotal number of page faults: {page_faults}")
 
 if __name__ == "__main__":
     main()
+
